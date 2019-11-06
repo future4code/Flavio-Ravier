@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#div-cabeca{
+    display: flex;
+    background-color: lightgreen;
+}
+#div-bot{
+    display: block;
+}
+#cabeca-titulo{
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    margin: 20px 100px 20px 75px;
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    display: inline;
+    letter-spacing: 2px;
+
+}
+
+#cabeca-site{
+    border-left-width: 3px;
+    border-left-style: solid;
+    padding-left: 175px;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-right: 175px;
+    /*margin: 20px 100px 20px 100px;*/
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    display: inline;
+    letter-spacing: 2px;
+}
+#link-site{
+    display: block;
+    text-decoration-line: none;
+}
+#link-site:active{
+    color: white;
+}
+
+#cabeca-site-func{
+    border-left-width: 3px;
+    border-left-style: solid;
+    padding-left: 175px;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-right: 50px;
+    /*margin: 20px 100px 20px 100px;*/
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    display: inline;
+    letter-spacing: 2px;
+   
+}
+#texto-bot{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #555;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 1.2;
+    font-size: 160%;
+}
+#texto-menor-bot{
+    margin-left: 19%;
+    margin-right: 19%;
+    text-align: justify;
+    font-family: 'Lato', sans-serif;
+    color: #777;
+    font-weight: 400;
+    letter-spacing: .05em;
+    line-height: 1.6;
+    font-size: 100%;
+}
