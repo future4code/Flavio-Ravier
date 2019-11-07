@@ -56,7 +56,7 @@ div img {
     color: white;
     display: block;
     position: fixed;
-    left: 40%;
+    left: 43%;
 }
 
 .botao-amarelo:hover {
@@ -91,6 +91,7 @@ div img {
 
 #container-para-comprar {
     background-color: #e7eb90;
+    
 }
 
 #container-para-comprar>p {
