@@ -170,5 +170,8 @@ td button:hover {
 .img-icone{
     width: 40px;
 }
+button:focus{
+    outline: none;
+}
 
 
