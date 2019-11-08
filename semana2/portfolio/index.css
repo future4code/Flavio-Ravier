@@ -1,0 +1,235 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#img-avatar {
+    position: relative;
+    left: 40%;
+}
+
+#bot {
+    border-bottom: solid 3px #6290C8;
+}
+
+#div-cabeca {
+    display: flex;
+    background-color: #6290C8;
+}
+
+#cabeca-titulo {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    margin: 20px 50px 20px 25px;
+    background-color: white;
+    /* text-align: center;
+    font-family: 'Raleway', sans-serif;
+    display: inline;
+    letter-spacing: 0.5px; */
+}
+
+#cabeca-site-vazia {
+    border-left-width: 1px;
+    border-left-style: solid;
+    padding-left: 175px;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-right: 450px;
+    /*margin: 20px 100px 20px 100px;*/
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    display: inline;
+    letter-spacing: 2px;
+}
+
+#cabeca-site {
+    /* border-left-width: 1px;
+    border-left-style: solid; */
+    padding-left: 50px;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-right: 50px;
+    /*margin: 20px 100px 20px 100px;*/
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    display: inline;
+    letter-spacing: 2px;
+}
+
+#cabeca-site-func {
+    /* border-left-width: 3px;
+    border-left-style: solid; */
+    padding-left: 50px;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-right: 50px;
+    /*margin: 20px 100px 20px 100px;*/
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    display: inline;
+    letter-spacing: 2px;
+}
+
+#link-site {
+    display: block;
+    text-decoration-line: none;
+}
+
+#link-site:active {
+    color: white;
+}
+
+#texto-bot {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #555;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 1.2;
+    font-size: 160%;
+}
+
+#texto-menor-bot {
+    margin-left: 30%;
+    text-align: justify;
+    font-family: 'Lato', sans-serif;
+    color: #777;
+    font-weight: 400;
+    letter-spacing: .05em;
+    line-height: 1.6;
+    font-size: 100%;
+}
+
+#projeto {
+    background-color: #62929E;
+}
+
+#mid {
+    background-color: #62929E;
+    width: 100%;
+    /* aqui tive de fazer uma conta de 1600 - 51*2 por causa do padding*/
+    height: 500px;
+    /* aqui tive de fazer uma conta de 400 - 58 por causa do padding*/
+    /*margin: auto;*/
+    position: relative;
+    display: flex
+    /* padding-top:3%;
+    padding-left:5.15%;
+    padding-right:5.15%; */
+}
+
+#div-block-1 {
+    position: relative;
+    width: 33%;
+    height: 71%;
+    margin: auto 0% auto 5%;
+    /*margin-bottom: 58px;
+    margin-top: 58px;
+    margin-left: 51.25px;*/
+    /* border-radius: 4px; */
+    background-color: #fff;
+    float: left;
+}
+
+#div-block-2 {
+    position: relative;
+    width: 33%;
+    height: 71%;
+    margin: auto 5% auto 5%;
+    /*margin-bottom: 58px;
+    margin-top: 58px;
+    margin-left: 51.25px;*/
+    /* border-radius: 4px; */
+    background-color: #fff;
+    float: left;
+}
+
+#div-block-3 {
+    position: relative;
+    width: 33%;
+    height: 71%;
+    margin: auto 5% auto 0%;
+    /*margin-bottom: 58px;
+    margin-top: 58px;
+    margin-left: 51.25px;*/
+    /* border-radius: 4px; */
+    background-color: #fff;
+    float: left;
+}
+
+.font1 {
+    color: #5E5D57;
+    margin: 0;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#protegeer-img {
+    color: rgb(205, 77, 0);
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#totaldet-img {
+    color: rgb(205, 77, 0);
+    margin: 0;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#font-projeto {
+    text-align: center;
+    color: white;
+}
+
+
+/** 
+  *
+  *  PROJETOS
+  *
+  **/
+
+
+/** 
+  *
+  *  ESTILOS x 
+  *
+  **/
