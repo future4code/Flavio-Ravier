@@ -1,0 +1,151 @@
+                                        * {
+                                        padding: 0;
+                                        margin: 0;
+                                    }
+                                    
+                                    #main-container {
+                                        display: flex;
+                                        flex-flow: row wrap;
+                                        width: 100%;
+                                        background-color: white;
+                                        justify-content: space-evenly;
+                                    }
+                                    
+                                    .red-container {
+                                        background-color: red;
+                                    }
+                                    
+                                    .blue-container {
+                                        background-color: blue;
+                                    }
+                                    
+                                    .yellow-container {
+                                        background-color: yellow;
+                                    }
+                                    
+                                    .green-container {
+                                        background-color: green;
+                                    }
+                                    
+                                    .black-container {
+                                        background-color: black;
+                                        color: white;
+                                    }
+                                    
+                                    .white-container {
+                                        background-color: white;
+                                        border: 1px solid black;
+                                    }
+                                    
+                                    #main-container>:nth-child(n+2) {
+                                        margin: 10px 0;
+                                    }
+                                    
+                                    #main-container>div {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                    
+                                    #main-container>:nth-child(1) {
+                                        width: 100%;
+                                        height: 100px;
+                                    }
+                                    
+                                    #main-container>:nth-child(2) {
+                                        width: 32%;
+                                        height: 100px;
+                                    }
+                                    
+                                    #main-container>:nth-child(3) {
+                                        width: 32%;
+                                        height: 100px;
+                                    }
+                                    
+                                    #main-container>:nth-child(4) {
+                                        width: 32%;
+                                        height: 100px;
+                                    }
+                                    
+                                    #main-container>:nth-child(5) {
+                                        width: 32vw;
+                                        height: 100px;
+                                    }
+                                    
+                                    #main-container>:nth-child(6) {
+                                        width: 32vw;
+                                        height: 100px;
+                                    }
+                                    
+                                    #main-container>:nth-child(7) {
+                                        width: 32vw;
+                                        height: 100px;
+                                    }
+                                    
+                                    #main-container>:nth-child(8) {
+                                        width: 48.5%;
+                                        height: 300px;
+                                    }
+                                    
+                                    #main-container>:nth-child(9) {
+                                        width: 48.5%;
+                                        height: 300px;
+                                    }
+                                    
+                                    #main-container>:nth-child(10) {
+                                        width: 32%;
+                                        height: 100px;
+                                    }
+                                    
+                                    #main-container>:nth-child(11) {
+                                        width: 32%;
+                                        height: 100px;
+                                    }
+                                    
+                                    #main-container>:nth-child(12) {
+                                        width: 32%;
+                                        height: 100px;
+                                    }
+                                    
+                                    @media screen and (max-width: 800px) {
+                                        #main-container>:nth-child(2) {
+                                            width: 48.5%;
+                                            height: 100px;
+                                        }
+                                        #main-container>:nth-child(3) {
+                                            width: 48.5%;
+                                            height: 100px;
+                                        }
+                                        #main-container>:nth-child(4) {
+                                            width: 48.5%;
+                                            height: 100px;
+                                        }
+                                        #main-container>:nth-child(5) {
+                                            width: 48.5%;
+                                            height: 100px;
+                                        }
+                                        #main-container>:nth-child(6) {
+                                            width: 48.5%;
+                                            height: 100px;
+                                        }
+                                        #main-container>:nth-child(7) {
+                                            width: 48.5%;
+                                            height: 100px;
+                                        }
+                                        #main-container>:nth-child(10) {
+                                            width: 48.5%;
+                                            height: 100px;
+                                        }
+                                        #main-container>:nth-child(11) {
+                                            width: 48.5%;
+                                            height: 100px;
+                                        }
+                                        #main-container>:nth-child(12) {
+                                            width: 48.5%;
+                                            height: 100px;
+                                        }
+                                        @media (max-width: 400px) {
+                                            #main-container>:nth-child(n+2) {
+                                                width: 97%;
+                                            }
+                                        }
