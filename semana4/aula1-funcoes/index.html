@@ -1,0 +1,223 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week Planner</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+
+
+
+
+<body>
+    <header><img src="./img/legume1.png"> Planejamento Alimentar<img src="./img/legume2.png"></header>
+    <div id="subtitulo">você + saudável</div>
+    <div class="container">
+        <label for="nova-task">Refeição:</label>
+        <input type="text" name="novaTask" id="novaTask">
+        <select name="diaDaSemana" id="diaDaSemana">
+            <option value="Seg-">Segunda-Feira</option>
+            <option value="Ter-">Terça-Feira</option>
+            <option value="Qua-">Quarta-Feira</option>
+            <option value="Qui-">Quinta-Feira</option>
+            <option value="Sex-">Sexta-Feira</option>
+            <option value="Sab-">Sábado</option>
+            <option value="Dom-">Domingo</option>
+        </select>
+        <select name="tipoDeRefeicao" id="tipoDeRefeicao">
+            <option value="Cafe">Café da Manhã</option>
+            <option value="Lanche">Lanche</option>
+            <option value="Almoco">Almoço</option>
+            <option value="Janta">Jantar</option>
+            <option value="Ceia">Ceia</option>
+        </select>
+        <button onclick="CriarClick()">    Criar    </button>
+    </div>
+    <hr>
+    <section id="tabela">
+        <div class="tabelaDia" id="segunda">
+            Segunda
+            <ul class="content"></ul>
+        </div>
+        <div class="tabelaDia" id="terca">
+            Terça
+            <ul class="content"></ul>
+        </div>
+        <div class="tabelaDia" id="quarta">
+            Quarta
+            <ul class="content"></ul>
+        </div>
+        <div class="tabelaDia" id="quinta">
+            Quinta
+            <ul class="content"></ul>
+        </div>
+        <div class="tabelaDia" id="sexta">
+            Sexta
+            <ul class="content"></ul>
+        </div>
+        <div class="tabelaDia" id="sabado">
+            Sábado
+            <ul class="content"></ul>
+        </div>
+        <div class="tabelaDia" id="domingo">
+            Domingo
+            <ul class="content"></ul>
+        </div>
+
+
+
+        <div class="tabelaRefeicao" id="ColunaCafe">
+            Café da Manhã
+            <ul class="content"></ul>
+        </div>
+        <div class="tabelaRefeicao" id="ColunaLanche">
+            Lanche
+            <ul class="content"></ul>
+        </div>
+        <div class="tabelaRefeicao" id="ColunaAlmoco">
+            Almoco
+            <ul class="content"></ul>
+        </div>
+        <div class="tabelaRefeicao" id="ColunaJanta">
+            Janta
+            <ul class="content"></ul>
+        </div>
+        <div class="tabelaRefeicao" id="ColunaCeia">
+            Ceia
+            <ul class="content"></ul>
+        </div>
+
+        <!-- <section id="respostas"> -->
+        <!-- Segunda -->
+        <div id="Seg-Cafe" class="interno-planner">
+
+            <ul class="content"></ul>
+        </div>
+        <div id="Seg-Lanche" class="interno-planner">
+
+            <ul class="content"></ul>
+        </div>
+        <div id="Seg-Almoco" class="interno-planner">
+
+            <ul class="content"></ul>
+        </div>
+        <div id="Seg-Janta" class="interno-planner">
+
+            <ul class="content"></ul>
+        </div>
+        <div id="Seg-Ceia" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <!-- Terça -->
+        <div id="Ter-Cafe" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Ter-Lanche" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Ter-Almoco" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Ter-Janta" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Ter-Ceia" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <!-- Quarta -->
+        <div id="Qua-Cafe" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Qua-Lanche" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Qua-Almoco" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Qua-Janta" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Qua-Ceia" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <!-- Quinta -->
+        <div id="Qui-Cafe" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Qui-Lanche" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Qui-Almoco" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Qui-Janta" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Qui-Ceia" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <!-- Sexta -->
+        <div id="Sex-Cafe" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Sex-Lanche" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Sex-Almoco" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Sex-Janta" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Sex-Ceia" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <!-- Sábado -->
+        <div id="Sab-Cafe" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Sab-Lanche" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Sab-Almoco" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Sab-Janta" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Sab-Ceia" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <!-- Domingo -->
+        <div id="Dom-Cafe" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Dom-Lanche" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Dom-Almoco" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Dom-Janta" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+        <div id="Dom-Ceia" class="interno-planner">
+            <ul class="content"></ul>
+        </div>
+
+        <!-- </section> -->
+
+    </section>
+
+
+</body>
+
+</html>

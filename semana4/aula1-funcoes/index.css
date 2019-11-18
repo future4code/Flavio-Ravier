@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-family: 'Muli', sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+img {
+    width: 100px;
+}
+
+#subtitulo {
+    text-align: center;
+    font-size: 1.75em;
+    font-family: 'Muli', sans-serif;
+    color: gray;
+    margin: 10px 0 25px 0;
+}
+
+button {
+    width: 100px;
+    font-size: 0.75em;
+}
+
+input {
+    font-size: 0.75em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 1.75em;
+}
+
+.container>* {
+    margin: 0 10px;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+.done {
+    text-decoration: line-through;
+    color: green;
+}
+
+#diaDaSemana {
+    font-size: 0.75em;
+}
+
+#tipoDeRefeicao {
+    font-size: 0.75em;
+}
+
+#tabela {
+    display: grid;
+    grid-template: 0.5fr repeat(7, 2fr)/repeat(6, 1fr);
+    align-content: center;
+    justify-content: center;
+    border: black solid 3px;
+    margin: 0 7%;
+}
+
+.tabelaDia {
+    grid-column: 1/2;
+    font-size: 2em;
+    text-align: right;
+    border: solid 1px;
+    display: grid;
+    align-content: center;
+    justify-content: right;
+    padding-right: 10px;
+    font-family: 'Muli', sans-serif;
+}
+
+#segunda {
+    grid-row: 2/3;
+    background-color: rgb(234, 160, 175);
+}
+
+#terca {
+    grid-row: 3/4;
+    background-color: rgb(238, 195, 160);
+}
+
+#quarta {
+    grid-row: 4/5;
+    background-color: rgb(189, 165, 153);
+}
+
+#quinta {
+    grid-row: 5/6;
+    background-color: rgb(165, 200, 136);
+}
+
+#sexta {
+    grid-row: 6/7;
+    background-color: rgb(161, 209, 232);
+}
+
+#sabado {
+    grid-row: 7/8;
+    background-color: rgb(162, 175, 207);
+}
+
+#domingo {
+    grid-row: 8/9;
+    background-color: rgb(170, 156, 192);
+}
+
+.tabelaRefeicao {
+    grid-row: 1/2;
+    font-size: 2em;
+    text-align: right;
+    border: solid 1px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding-right: 10px;
+    font-family: 'Muli', sans-serif;
+}
+
+#ColunaCafe {
+    grid-column: 2/3;
+    background-color: rgb(165, 200, 136);
+}
+
+#ColunaLanche {
+    grid-column: 3/4;
+    background-color: rgb(164, 175, 207);
+}
+
+#ColunaAlmoco {
+    grid-column: 4/5;
+    background-color: rgb(189, 165, 153);
+}
+
+#ColunaJanta {
+    grid-column: 5/6;
+    background-color: rgb(234, 160, 175);
+}
+
+#ColunaCeia {
+    grid-column: 6/7;
+    background-color: rgb(161, 209, 232);
+}
+
+
+/* #respostas {
+    grid-column: 2/ span 5;
+    grid-row: 2/span 7;
+    grid: display;
+    grid-template:repeat(7, 4fr)/repeat(6, 1fr);
+
+} */
+
+.interno-planner {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: solid 1px;
+}
+
+.content {
+    font-size: 2em;
+}
+
+#Seg-Cafe {
+    grid-row: 2/3;
+    grid-column-gap: 2/3;
+}
+
+#Seg-Lanche {
+    grid-row: 2/3;
+    grid-column-gap: 3/4;
+}
+
+#Seg-Almoco {
+    grid-row: 2/3;
+    grid-column-gap: 4/5;
+}
+
+#Seg-Janta {
+    grid-row: 2/3;
+    grid-column-gap: 5/6;
+}
+
+#Seg-Ceia {
+    grid-row: 2/3;
+    grid-column-gap: 6/7;
+}
+
+#Ter-Cafe {
+    grid-row: 3/4;
+    grid-column-gap: 2/3;
+}
+
+#Ter-Lanche {
+    grid-row: 3/4;
+    grid-column-gap: 3/4;
+}
+
+#Ter-Almoco {
+    grid-row: 3/4;
+    grid-column-gap: 4/5;
+}
+
+#Ter-Janta {
+    grid-row: 3/4;
+    grid-column-gap: 5/6;
+}
+
+#Ter-Ceia {
+    grid-row: 3/4;
+    grid-column-gap: 6/7;
+}
+
+#Qua-Cafe {
+    grid-row: 4/5;
+    grid-column-gap: 2/3;
+}
+
+#Qua-Lanche {
+    grid-row: 4/5;
+    grid-column-gap: 3/4;
+}
+
+#Qua-Almoco {
+    grid-row: 4/5;
+    grid-column-gap: 4/5;
+}
+
+#Qua-Janta {
+    grid-row: 4/5;
+    grid-column-gap: 5/6;
+}
+
+#Qua-Ceia {
+    grid-row: 4/5;
+    grid-column-gap: 6/7;
+}
+
+#Qui-Cafe {
+    grid-row: 5/6;
+    grid-column-gap: 2/3;
+}
+
+#Qui-Lanche {
+    grid-row: 5/6;
+    grid-column-gap: 3/4;
+}
+
+#Qui-Almoco {
+    grid-row: 5/6;
+    grid-column-gap: 4/5;
+}
+
+#Qui-Janta {
+    grid-row: 5/6;
+    grid-column-gap: 5/6;
+}
+
+#Qui-Ceia {
+    grid-row: 5/6;
+    grid-column-gap: 6/7;
+}
+
+#Sex-Cafe {
+    grid-row: 6/7;
+    grid-column-gap: 2/3;
+}
+
+#Sex-Lanche {
+    grid-row: 6/7;
+    grid-column-gap: 3/4;
+}
+
+#Sex-Almoco {
+    grid-row: 6/7;
+    grid-column-gap: 4/5;
+}
+
+#Sex-Janta {
+    grid-row: 6/7;
+    grid-column-gap: 5/6;
+}
+
+#Sex-Ceia {
+    grid-row: 6/7;
+    grid-column-gap: 6/7;
+}
+
+#Sab-Cafe {
+    grid-row: 7/8;
+    grid-column-gap: 2/3;
+}
+
+#Sab-Lanche {
+    grid-row: 7/8;
+    grid-column-gap: 3/4;
+}
+
+#Sab-Almoco {
+    grid-row: 7/8;
+    grid-column-gap: 4/5;
+}
+
+#Sab-Janta {
+    grid-row: 7/8;
+    grid-column-gap: 5/6;
+}
+
+#Sab-Ceia {
+    grid-row: 7/8;
+    grid-column-gap: 6/7;
+}
+
+#Dom-Cafe {
+    grid-row: 8/9;
+    grid-column-gap: 2/3;
+}
+
+#Dom-Lanche {
+    grid-row: 8/9;
+    grid-column-gap: 3/4;
+}
+
+#Dom-Almoco {
+    grid-row: 8/9;
+    grid-column-gap: 4/5;
+}
+
+#Dom-Janta {
+    grid-row: 8/9;
+    grid-column-gap: 5/6;
+}
+
+#Dom-Ceia {
+    grid-row: 8/9;
+    grid-column-gap: 6/7;
+}
+
+
+/* section>div {
+    border: 1px solid black;
+    min-height: 25vh;
+    padding: 10px;
+    height: 50vh;
+    min-width: 400px;
+    font-size: 30px;
+} */
