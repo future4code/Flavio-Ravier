@@ -13,3 +13,17 @@ function CriarClick() {
     divLocal.innerHTML = '<ul class="content">' + refeicao + '</ul>'
     document.getElementById("novaTask").value = ""
 }
+
+function ClearClick() {
+    const localApagar = document.getElementsByClassName("interno-planner")
+    for (valor of localApagar) {
+        valor.innerHTML = ""
+    }
+}
+
+function RiscarClick(clicked_id) {
+    const localRiscar = document.getElementById(clicked_id)
+
+    localRiscar.innerHTML += '< ul style="text-decoration: line-through;" class = "content" > teste< /ul>'
+
+}
