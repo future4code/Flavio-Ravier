@@ -1,7 +1,7 @@
 class post {
     constructor(titulo, autor, conteudo) {
         this.titulo = titulo
-        this.auto = autor
+        this.autor = autor
         this.conteudo = conteudo
     }
 
@@ -21,4 +21,13 @@ function criarPost() {
     document.getElementById("autor").value = ""
     document.getElementById("conteudo").value = ""
     console.log(arrayPost)
+}
+
+function addPost() {
+    var localPost = document.getElementById("post")
+    for (var postagem of arrayPost) {
+        localPost.innerHTML += '<p>Titulo: ' + postagem.titulo + ' </p>'
+        localPost.innerHTML += '<p>Autor: ' + postagem.autor + ' </p>'
+        localPost.innerHTML += '<p>Conteúdo: ' + postagem.conteudo + ' </p>'
+    }
 }

@@ -3,9 +3,21 @@
     margin: 0;
 }
 
-section article {
+section,
+article {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
+}
+
+input,
+p,
+button,
+textarea {
+    margin-bottom: 15px;
+}
+
+hr {
+    margin: 30px 0;
 }
