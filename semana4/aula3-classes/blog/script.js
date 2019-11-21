@@ -1,9 +1,3 @@
-var arrayPost = []
-const valorTitulo = document.getElementById("titulo").value
-const valorAutor = document.getElementById("autor").value
-const valorConteudo = document.getElementById("conteudo").value
-
-
 class post {
     constructor(titulo, autor, conteudo) {
         this.titulo = titulo
@@ -12,10 +6,19 @@ class post {
     }
 
 }
+var arrayPost = []
 
 function criarPost() {
+
+    var valorTitulo = document.getElementById("titulo").value
+    var valorAutor = document.getElementById("autor").value
+    var valorConteudo = document.getElementById("conteudo").value
+    console.log(valorTitulo)
+    console.log(valorAutor)
+    console.log(valorConteudo)
     arrayPost.push(new post(valorTitulo, valorAutor, valorConteudo))
-    valorTitulo = ""
-    valorAutor = ""
-    valorConteudo = ""
+    document.getElementById("titulo").value = ""
+    document.getElementById("autor").value = ""
+    document.getElementById("conteudo").value = ""
+    console.log(arrayPost)
 }
