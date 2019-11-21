@@ -15,4 +15,7 @@ class post {
 
 function criarPost() {
     arrayPost.push(new post(valorTitulo, valorAutor, valorConteudo))
+    valorTitulo = ""
+    valorAutor = ""
+    valorConteudo = ""
 }
