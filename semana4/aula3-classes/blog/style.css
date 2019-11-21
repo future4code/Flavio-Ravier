@@ -1,0 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
