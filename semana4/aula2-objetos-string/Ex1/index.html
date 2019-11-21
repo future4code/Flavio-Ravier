@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Formulário de inscrição Future4</h1>
+        <form>
+            <label for="nome">Nome:</label>
+            <input id="nome" name="nome" type="text" placeholder="Nome">
+            <label for="idade">Idade:</label>
+            <input id="idade" name="idade" type="text" placeholder="Idade">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="text" placeholder="Email">
+        </form>
+        <section>
+            <button onclick="cadastrar()">Cadastrar</button>
+            <button onclick="clearAll()">Clear all</button>
+            <!--  <a href="dados.html">
+                <button id="botao-inscritos">Inscritos</button>
+            </a> -->
+        </section>
+        <section id="dados" class="container-dados">
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>

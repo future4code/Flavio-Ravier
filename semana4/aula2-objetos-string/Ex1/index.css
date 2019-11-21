@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.container input {
+    width: 250px;
+    font-size: 0.5em;
+}
+
+.container form {
+    display: grid;
+    grid-template: repeat(6, 50px)/1fr;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2em;
+    margin: 10px 0 0 10px;
+}
+
+.container-dados {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+section button {
+    width: 100px;
+    margin: 10px;
+}
+
+.dado-aluno {
+    margin-bottom: 10px;
+    border: 1px dashed orange;
+    padding: 10px;
+    flex-shrink: 0;
+}
