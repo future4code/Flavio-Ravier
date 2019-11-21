@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-article {
+section article {
     display: flex;
     flex-direction: column;
     justify-content: start;
