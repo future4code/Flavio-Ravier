@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="" href="style.css">
+    <title>Blog</title>
+</head>
+
+<body>
+
+    <main id="main-top">
+        <section class="container">
+
+
+            <h4>Controlador de Despesas</h4>
+            <h5>Controlador de Despesas</h5>
+
+            <label for="input-valor">Valor</label>
+            <input id="input-valor">
+
+            <label for="select-tipo-cadastro">Tipo</label>
+            <select id="select-tipo-cadastro">
+                    <option value="Casa">Casa</option>
+                    <option value="Viagem">Viagem</option>
+                    <option value="Roles">Rolês</option>
+                    <option value="Outros">Outros</option>
+                </select>
+
+            <label for="input-descricao">Descrição:</label>
+            <input id="input-descricao">
+
+            <button onclick="cadastrarDespesa()">Cadastrar</button>
+
+
+
+        </section>
+
+        <section class="container">
+
+            <h4>Despesas Detalhadas</h4>
+
+            <label for="select-tipo-filtro">Tipo</label>
+            <select id="select-tipo-filtro">
+                    <option value="Casa">Casa</option>
+                    <option value="Viagem">Viagem</option>
+                    <option value="Roles">Rolês</option>
+                    <option value="Outros">Outros</option>
+                </select>
+
+
+            <!--             colocar aparato de volume -->
+            <label for="input-valorMin">Valor Mínimo:</label>
+            <input id="input-valorMin">
+            <label for="input-valorMax">Valor Máximo:</label>
+            <input id="input-valorMax">
+
+            <button onclick="filtrarDespesa()">Filtrar</button>
+            <button onclick="limparFiltro()">Limpar Filtros</button>
+
+        </section>
+
+
+
+        <section class="container">
+
+            <h4>Extrato</h4>
+            <h5>Valor Total:</h5>
+
+            <div id="extrato"></div>
+        </section>
+
+
+
+
+    </main>
+    <main id="main-bot">
+        <button id="sort" onclick="sort()">Sort</button>
+        <section class="container-bot">
+
+            <h3>Lista de Despesas</h3>
+            <hr>
+            <br>
+            <div id="lista-despesa"></div>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
