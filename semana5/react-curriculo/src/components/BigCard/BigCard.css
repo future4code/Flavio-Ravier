@@ -1,0 +1,29 @@
+.BigCard {
+	width:  500px;
+	display: grid;
+	grid-template: 50px 200px/100px 400px;
+	border: 2px solid black;
+    text-align: justify;
+    margin: 20px 15px;
+    padding-top: 20px;
+    padding-right:15px ;
+}
+
+.BigCard img {
+    grid-row: 2/2;
+    display: grid;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 70px;
+    height: 70px;
+    margin:20px 0 auto auto;
+    padding: auto   ;
+}
+.BigCard #titulo {
+    padding: 0 10px;
+    grid-row: 1/1;
+    grid-column: 2/2;
+}
+.BigCard #texto {
+    padding: 0 10px;
+}
