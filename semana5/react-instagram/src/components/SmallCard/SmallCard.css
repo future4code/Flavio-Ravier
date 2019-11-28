@@ -2,12 +2,14 @@
 	width:  300px;
 	display: flex;
 	flex-direction: row;
-	border: 2px solid black;
+    border: 1px solid gray;
+    border-bottom: 0;
     text-align: justify;
-    margin: 20px 15px;
+    margin: 0;
     align-items: center;
    justify-content: flex-start;
-    padding-right:15px ;
+   
+    height: 50px;
 }
 
 .SmallCard img {
@@ -15,11 +17,9 @@
     display: grid;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 70px;
-    height: 70px;
-    padding: 3px;
-   
-    padding: auto   ;
+    width: 35px;
+    height: 35px;
+    padding: 3px 15px;
 }
 .SmallCard #titulo {
     
