@@ -1,0 +1,8 @@
+.PageSection {
+	padding-top: 100px;
+	display: grid;
+	grid-template: 1fr/1fr;
+	padding-top: 10px;
+	justify-items: center;
+	row-gap: 10px;
+}

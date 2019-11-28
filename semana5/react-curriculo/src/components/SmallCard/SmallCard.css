@@ -1,0 +1,31 @@
+.SmallCard {
+	width:  500px;
+	display: flex;
+	flex-direction: row;
+	border: 2px solid black;
+    text-align: justify;
+    margin: 20px 15px;
+    align-items: center;
+   justify-content: flex-start;
+    padding-right:15px ;
+}
+
+.SmallCard img {
+   
+    display: grid;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 70px;
+    height: 70px;
+    padding: 3px;
+   
+    padding: auto   ;
+}
+.SmallCard #titulo {
+    
+    grid-column: 2/2;
+}
+.SmallCard #titulo {
+    
+    grid-column: 2/2;
+}
