@@ -44,9 +44,30 @@ class App extends React.Component {
     super(props);
     this.state = {
       tela: "infoGerais",  //-infoEduc -infoNoSup -infoFinal 
-      selectPage1: "EnsMed",
+      selectPage1: "EnsMed", 
+      Input1:"",
+      Input2:"",
+      Input3:"",
+      Input4:"",
+      Input5:"",
+      Input6:"",
+      
     };
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
+
+
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
+
 
   controleSelectPage1 = e => {
 		this.setState({
@@ -55,18 +76,38 @@ class App extends React.Component {
 	  };
 
   onClickFolha1 = () => {
-    
-    
-    if (this.state.selectPage1 === "EnsMed"){
-      this.setState({ tela: "infoNoSup" });
-    }  else {
-      this.setState({ tela: "infoEduc" });
+    if (this.state.Input1 !== "" && this.state.Input2 !== "" && this.state.Input3 !== "" ){
+      if (this.state.selectPage1 === "EnsMed"){
+        this.setState({ tela: "infoNoSup" });
+      }  else {
+        this.setState({ tela: "infoEduc" });
+      }
+    } else {
+      alert("Não deixe espaços em branco")
     }
-  };
+    };
+    
+    
 
   onClickFolha2 = () => {
-    
+    if (this.state.tela === "infoEduc"){
+      if (this.state.Input4 !== "" && this.state.Input5 !== ""){
+
+        this.setState({ tela: "infoFinal" });
+      } else {
+        alert("Não deixe espaços em branco")
+      }
+    } else {
+      if (this.state.Input6 !== "" ){
+
       this.setState({ tela: "infoFinal" });
+    } else {
+      alert("Não deixe espaços em branco")
+    }
+
+    }
+
+      
     
   };
 
@@ -79,11 +120,11 @@ switch(this.state.tela){
       <MainContainer>
         <h2>DADOS GERAIS</h2>
         <LabelPergunta>1. Qual o seu nome?</LabelPergunta>
-        <InputResposta onChange={this.controleInput}></InputResposta>
+        <InputResposta value={this.state.Input1} name="Input1" onChange={this.handleInputChange}></InputResposta>
         <LabelPergunta>1. Qual sua idade?</LabelPergunta>
-        <InputResposta></InputResposta>
+        <InputResposta value={this.state.Input2} name="Input2" onChange={this.handleInputChange}></InputResposta>
         <LabelPergunta>1. Qual seu email?</LabelPergunta>
-        <InputResposta></InputResposta>
+        <InputResposta value={this.state.Input3} name="Input3" onChange={this.handleInputChange}></InputResposta>
         <LabelPergunta>1. Qual sua escolaridade?</LabelPergunta>
         <SelectResposta onChange={this.controleSelectPage1}>
           <option value="EnsMed">Ensino Médio Incompleto</option>
@@ -99,9 +140,10 @@ switch(this.state.tela){
       containerScreen = (
       <MainContainer>
         <h2>INFORMAÇÕES DO ENSINO SUPERIOR</h2>
-        <LabelPergunta>5. Qual curso?</LabelPergunta>
-        <InputResposta></InputResposta>
+        <LabelPergunta >5. Qual curso?</LabelPergunta>
+        <InputResposta value={this.state.Input4} name="Input4" onChange={this.handleInputChange}></InputResposta>
         <LabelPergunta>6. Qual a unidade de ensino?</LabelPergunta>
+        <InputResposta value={this.state.Input5} name="Input5" onChange={this.handleInputChange}></InputResposta>
         <ButtonNext onClick={this.onClickFolha2}>Próxima Etapa >></ButtonNext>
       </MainContainer>
     );
@@ -110,9 +152,9 @@ switch(this.state.tela){
       containerScreen = (
       <MainContainer>
         <h2>INFORMAÇÕES GERAIS DE ENSINO</h2>
-        <LabelPergunta>7. Por que você não terminou um curso de graduação?</LabelPergunta>
-        <InputResposta></InputResposta>
-        <LabelPergunta>8. Você fez algum curso complementar?</LabelPergunta>
+        <LabelPergunta>5. Por que você não terminou um curso de graduação?</LabelPergunta>
+        <InputResposta value={this.state.Input6} name="Input6" onChange={this.handleInputChange}></InputResposta>
+        <LabelPergunta>6. Você fez algum curso complementar?</LabelPergunta>
         <SelectResposta>
           <option value="EnsMedInc">Nenhum</option>
           <option value="EnsMedC">Curso Técnico</option>
