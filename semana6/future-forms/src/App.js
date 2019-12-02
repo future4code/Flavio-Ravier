@@ -30,8 +30,14 @@ const InputResposta = styled.input`
 `;
 
 const SelectResposta = styled.select`
-
+  margin:10px 0;
 `;
+
+const Preencher = styled.p`
+text-align: left;
+color:red;
+`;
+
 
 const ButtonNext = styled.button`
 margin:auto;
@@ -51,7 +57,12 @@ class App extends React.Component {
       Input4:"",
       Input5:"",
       Input6:"",
-      
+      Input11:"",
+      Input22:"",
+      Input33:"",
+      Input44:"",
+      Input55:"",
+      Input66:"",
     };
     this.handleInputChange = this.handleInputChange.bind(this);
   }
@@ -84,6 +95,25 @@ class App extends React.Component {
       }
     } else {
       alert("Não deixe espaços em branco")
+      if (this.state.Input1 === ""){
+        this.setState({Input11: <div><Preencher>Preencha seu nome</Preencher></div>})
+      }else{
+        this.setState({Input11:""})
+
+      }
+      if (this.state.Input2 === "") {
+        this.setState({Input22: <div><Preencher>Preencha seu Idade</Preencher></div>})
+      }else{
+        this.setState({Input22:""})
+
+      }
+      if (this.state.Input3 === ""){
+        this.setState({Input33: <div><Preencher>Preencha seu Email</Preencher></div>})
+      }else{
+        this.setState({Input33:""})
+
+      }
+     
     }
     };
     
@@ -93,16 +123,36 @@ class App extends React.Component {
     if (this.state.tela === "infoEduc"){
       if (this.state.Input4 !== "" && this.state.Input5 !== ""){
 
-        this.setState({ tela: "infoFinal" });
+        this.setState({ tela: "infoFinal" }); 
       } else {
         alert("Não deixe espaços em branco")
+        if (this.state.Input4 === ""){
+          this.setState({Input44: <div><Preencher>Preencha seu curso</Preencher></div>})
+        } else{
+          this.setState({Input44:""})
+
+        }
+        if (this.state.Input5 === "") {
+          this.setState({Input55: <div><Preencher>Preencha sua unidade de Ensino</Preencher></div>})
+        }else{
+          this.setState({Input55:""})
+
+        }
       }
+      
+
     } else {
       if (this.state.Input6 !== "" ){
 
       this.setState({ tela: "infoFinal" });
     } else {
       alert("Não deixe espaços em branco")
+      if (this.state.Input6 === "") {
+        this.setState({Input66: <div><Preencher>Preencha seu curso complementar</Preencher></div>})
+      }else{
+        this.setState({Input66:""})
+
+      }
     }
 
     }
@@ -114,6 +164,13 @@ class App extends React.Component {
 
 render(){
 let containerScreen;
+let infoInput1 = this.state.Input11
+let infoInput2 = this.state.Input22
+let infoInput3 = this.state.Input33
+let infoInput4 = this.state.Input44
+let infoInput5 = this.state.Input55
+let infoInput6 = this.state.Input66
+
 switch(this.state.tela){
   case "infoGerais":
     containerScreen = (
@@ -121,10 +178,13 @@ switch(this.state.tela){
         <h2>DADOS GERAIS</h2>
         <LabelPergunta>1. Qual o seu nome?</LabelPergunta>
         <InputResposta value={this.state.Input1} name="Input1" onChange={this.handleInputChange}></InputResposta>
+        {infoInput1}
         <LabelPergunta>1. Qual sua idade?</LabelPergunta>
         <InputResposta value={this.state.Input2} name="Input2" onChange={this.handleInputChange}></InputResposta>
+        {infoInput2}
         <LabelPergunta>1. Qual seu email?</LabelPergunta>
         <InputResposta value={this.state.Input3} name="Input3" onChange={this.handleInputChange}></InputResposta>
+        {infoInput3}
         <LabelPergunta>1. Qual sua escolaridade?</LabelPergunta>
         <SelectResposta onChange={this.controleSelectPage1}>
           <option value="EnsMed">Ensino Médio Incompleto</option>
@@ -142,8 +202,10 @@ switch(this.state.tela){
         <h2>INFORMAÇÕES DO ENSINO SUPERIOR</h2>
         <LabelPergunta >5. Qual curso?</LabelPergunta>
         <InputResposta value={this.state.Input4} name="Input4" onChange={this.handleInputChange}></InputResposta>
+        {infoInput4}
         <LabelPergunta>6. Qual a unidade de ensino?</LabelPergunta>
         <InputResposta value={this.state.Input5} name="Input5" onChange={this.handleInputChange}></InputResposta>
+        {infoInput5}
         <ButtonNext onClick={this.onClickFolha2}>Próxima Etapa >></ButtonNext>
       </MainContainer>
     );
@@ -154,6 +216,7 @@ switch(this.state.tela){
         <h2>INFORMAÇÕES GERAIS DE ENSINO</h2>
         <LabelPergunta>5. Por que você não terminou um curso de graduação?</LabelPergunta>
         <InputResposta value={this.state.Input6} name="Input6" onChange={this.handleInputChange}></InputResposta>
+        {infoInput6}
         <LabelPergunta>6. Você fez algum curso complementar?</LabelPergunta>
         <SelectResposta>
           <option value="EnsMedInc">Nenhum</option>
@@ -172,7 +235,6 @@ switch(this.state.tela){
         );
     break;
     default:
-       
 }
 
 
@@ -181,10 +243,7 @@ switch(this.state.tela){
       {containerScreen}
     </PageSection>
   );
-
 }
-
- 
 }
 
 export default App;
