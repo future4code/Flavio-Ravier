@@ -118,8 +118,8 @@ class App extends React.Component {
 		super(props);
 		this.state = {
       inputTarefa:"",
-      selectFiltro:"Nenhum",
       estadoStatus :"pendente" ,
+      arrTarefasBackup:[],
       arrTarefas:[],
       id:"",
 		}  
@@ -135,24 +135,61 @@ controleTarefa = e => {
 };
 
 controleFiltro = e => {
+
+  console.log("clicou")
   this.setState({
     selectFiltro: e.target.value
   });
+
+  const arrTarefasBackupCopy = [...this.state.arrTarefasBackup]
+  /* this.setState({
+    arrTarefas:arrTarefasBackupCopy
+  }) */
+
+  let arrTarefasFiltrata = [...this.state.arrTarefasBackup]
+    
+  if(e.target.value==="Nenhum"){
+
+  } else if (e.target.value==="Pendente"){
+    arrTarefasFiltrata = arrTarefasFiltrata.filter((item) => {
+     
+      return item.valorStatus == "pendente"
+    })
+  } else if (e.target.value == "Completo"){
+    arrTarefasFiltrata = arrTarefasFiltrata.filter((item) => {
+      return item.valorStatus == "completo"
+    })
+  }
+  this.setState({
+    arrTarefas : arrTarefasFiltrata
+  });
+  
+
+
+
+
 };
 
 /* 
-Mudar Status */
+Filtrar Lista */
+
+
+
+
+/* 
+Add Tarefa */
 
 
 
 addTarefa = () =>{
   
   if(this.state.inputTarefa !==""){
-    const arrTarefasDefinidor = {valorTarefa:this.state.inputTarefa , valorFiltro: this.state.selectFiltro,valorStatus: this.state.estadoStatus,valorId:Date.now()}
+    const arrTarefasDefinidor = {valorTarefa:this.state.inputTarefa , valorStatus: this.state.estadoStatus,valorId:Date.now()}
     const arrTarefasCopia = [...this.state.arrTarefas,arrTarefasDefinidor]
   
     this.setState({
-      arrTarefas : arrTarefasCopia
+      arrTarefas : arrTarefasCopia,
+      arrTarefasBackup : arrTarefasCopia,
     });
     this.setState({
       inputTarefa:""
@@ -179,7 +216,7 @@ if(item.valorId === e){
 }
 
 )
- this.forceUpdate() 
+ this.forceUpdate() ;
 }
 
   
@@ -202,15 +239,16 @@ if(item.valorId === e){
         </SelectFiltro>
       </ContainerFiltro>
 
-{this.state.arrTarefas.map(element =>{
+      {this.state.arrTarefas.map(element =>{
   
-  return (
-    <ContainerLista onClick={() => {this.mudarStatus(element.valorId)}} key={element.valorId}>
-      <ContainerStatus status={element.valorStatus}></ContainerStatus>
-      <ContainerMensagem >{element.valorTarefa}</ContainerMensagem>
-    </ContainerLista>
-  )
-})}
+        return (
+          <ContainerLista onClick={() => {this.mudarStatus(element.valorId)}} key={element.valorId}>
+            <ContainerStatus status={element.valorStatus}></ContainerStatus>
+            <ContainerMensagem >{element.valorTarefa}</ContainerMensagem>
+          </ContainerLista>
+        )
+        })
+      }
 
       <ContainerFooter>
         <Legenda>LEGENDA: </Legenda>
@@ -221,7 +259,8 @@ if(item.valorId === e){
       </ContainerFooter>
     </MainContainer>
     
-  );
+  );  
+  
 }
 }
 
