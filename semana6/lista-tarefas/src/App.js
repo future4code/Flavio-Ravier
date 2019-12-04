@@ -115,16 +115,44 @@ margin-right:30px;
 class App extends React.Component {
   
   constructor(props){
-		super(props);
+  
+
+
+    super(props);
+    const selectStatusLocal = localStorage.getItem("selectStatus") !== null ? localStorage.getItem("selectStatus") : "nenhum"
+    const estadoStatusLocal = localStorage.getItem("estadoStatus") !== null ? localStorage.getItem("estadoStatus") : "pendente"
+
+    const arrTarefasBackupLocal = localStorage.getItem("arrTarefasBackup") !== null ? localStorage.getItem("arrTarefasBackup"):"1";
+    const arrTarefasLocal = localStorage.getItem("arrTarefas") !== null ? localStorage.getItem("arrTarefas"):"1";
+    
+    const arrTarefasBackupSalvo = arrTarefasBackupLocal !== "1" ? JSON.parse(arrTarefasBackupLocal): []
+    const arrTarefasSalvo = arrTarefasLocal !== "1" ? JSON.parse(arrTarefasLocal):[]
+
+    console.log("local t:",arrTarefasSalvo)
+    console.log("local tb:",arrTarefasBackupSalvo)
+  
 		this.state = {
       inputTarefa:"",
-      estadoStatus :"pendente" ,
-      arrTarefasBackup:[],
-      arrTarefas:[],
+      selectStatus:selectStatusLocal,
+      estadoStatus :estadoStatusLocal ,
+      arrTarefasBackup:arrTarefasBackupSalvo ,
+      arrTarefas: arrTarefasSalvo ,
       id:"",
 		}  
 	}
+ 
+componentDidMount(){
   
+}
+
+componentDidUpdate(){
+localStorage.setItem("estadoStatus",this.state.estadoStatus)
+localStorage.setItem("selectStatus",this.state.selectStatus)
+localStorage.setItem("arrTarefas",JSON.stringify(this.state.arrTarefas))
+localStorage.setItem("arrTarefasBackup",JSON.stringify(this.state.arrTarefasBackup))
+console.log("localstoragedasd")
+}  
+
 /* 
 Adicionar Tarefa */
 
@@ -138,26 +166,24 @@ controleFiltro = e => {
 
   console.log("clicou")
   this.setState({
-    selectFiltro: e.target.value
+    selectStatus: e.target.value
   });
 
-  const arrTarefasBackupCopy = [...this.state.arrTarefasBackup]
-  /* this.setState({
-    arrTarefas:arrTarefasBackupCopy
-  }) */
+  
+  
 
   let arrTarefasFiltrata = [...this.state.arrTarefasBackup]
     
-  if(e.target.value==="Nenhum"){
+  if(e.target.value==="nenhum"){
 
-  } else if (e.target.value==="Pendente"){
+  } else if (e.target.value==="pendente"){
     arrTarefasFiltrata = arrTarefasFiltrata.filter((item) => {
      
-      return item.valorStatus == "pendente"
+      return item.valorStatus === "pendente"
     })
-  } else if (e.target.value == "Completo"){
+  } else if (e.target.value === "completo"){
     arrTarefasFiltrata = arrTarefasFiltrata.filter((item) => {
-      return item.valorStatus == "completo"
+      return item.valorStatus === "completo"
     })
   }
   this.setState({
@@ -207,9 +233,9 @@ mudarStatus = (e) => {
 
 this.state.arrTarefas.map(item =>{
 if(item.valorId === e){
-  if(item.valorStatus ==="pendente"){
+  if(item.valorStatus ==="pendente" ){
     item.valorStatus = "completo"
-  } else {
+  } else if(item.valorStatus ==="completo" ){
     item.valorStatus = "pendente"
   }
 }
@@ -232,19 +258,19 @@ if(item.valorId === e){
       </ContainerAdicionar>
       <ContainerFiltro>
       <LabelFiltro>Filtro: </LabelFiltro>
-        <SelectFiltro value={this.state.selectFiltro} onChange={this.controleFiltro}>
-          <option value="Nenhum">Nenhum</option>
-          <option value="Pendente">Pendente</option>
-          <option value="Completo">Completo</option>
+        <SelectFiltro value={this.state.selectStatus} onChange={this.controleFiltro}>
+          <option value="nenhum">Nenhum</option>
+          <option value="pendente">Pendente</option>
+          <option value="completo">Completo</option>
         </SelectFiltro>
       </ContainerFiltro>
 
       {this.state.arrTarefas.map(element =>{
   
         return (
-          <ContainerLista onClick={() => {this.mudarStatus(element.valorId)}} key={element.valorId}>
+          <ContainerLista onClick={() => {this.mudarStatus(element.valorId)}}    key={element.valorId}>
             <ContainerStatus status={element.valorStatus}></ContainerStatus>
-            <ContainerMensagem >{element.valorTarefa}</ContainerMensagem>
+            <ContainerMensagem  >{element.valorTarefa}</ContainerMensagem>
           </ContainerLista>
         )
         })
