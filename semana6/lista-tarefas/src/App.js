@@ -95,6 +95,15 @@ width:250px;
 padding-left:5px;
 `;
 
+const ContainerDelete = styled.div`
+background-color:red;
+border:1px solid grey;
+border-left:0;
+width:10px;
+padding-left:5px;
+height:22px;
+`;
+
 const ContainerFooter = styled.div`
 background-color: #F9F9F9;
 position:fixed;
@@ -111,6 +120,8 @@ font-weight:bold;
 font-size:20px;
 margin-right:30px;
 `;
+
+
 
 class App extends React.Component {
   
@@ -231,7 +242,10 @@ Mudar estado */
 
 mudarStatus = (e) => {
 
-this.state.arrTarefas.map(item =>{
+  const arrTarefasCopia = [...this.state.arrTarefas]
+  
+
+arrTarefasCopia.forEach(item =>{
 if(item.valorId === e){
   if(item.valorStatus ==="pendente" ){
     item.valorStatus = "completo"
@@ -242,13 +256,40 @@ if(item.valorId === e){
 }
 
 )
- this.forceUpdate() ;
+this.setState ({
+  arrTarefas:arrTarefasCopia,
+})
+
 }
 
+deletarMensagem = (taskId) =>{
+ 
+ 
+ 
+ 
+  if (window.confirm('Tem certeza que deseja deletar essa mensagem?')){
+  debugger
+    const indexToRemove = this.state.arrTarefas.findIndex(item =>{
+      return item.valorId === taskId
+    })
+   
+    const arrTarefasCopia = [...this.state.arrTarefas]
+        
+
+    arrTarefasCopia.splice(indexToRemove,1)
+    
+    this.setState({
+      arrTarefas : arrTarefasCopia,
+      arrTarefasBackup : arrTarefasCopia,
+    });
+
+}
+}
   
 
 
   render(){
+  console.log(this.state.arrTarefas)
   return (
     <MainContainer>
       <TituloH2>Lista de Tarefas</TituloH2>
@@ -268,9 +309,10 @@ if(item.valorId === e){
       {this.state.arrTarefas.map(element =>{
   
         return (
-          <ContainerLista onClick={() => {this.mudarStatus(element.valorId)}}    key={element.valorId}>
+          <ContainerLista  key={element.valorId}>
             <ContainerStatus status={element.valorStatus}></ContainerStatus>
-            <ContainerMensagem  >{element.valorTarefa}</ContainerMensagem>
+            <ContainerMensagem onClick={() => {this.mudarStatus(element.valorId)}}>{element.valorTarefa}</ContainerMensagem>
+           <ContainerDelete onClick={() => {this.deletarMensagem(element.valorId)}}></ContainerDelete>
           </ContainerLista>
         )
         })
