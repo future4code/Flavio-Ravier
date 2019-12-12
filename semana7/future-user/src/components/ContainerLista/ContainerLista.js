@@ -16,6 +16,11 @@ const MainContainer = styled.div`
     padding:5px;
  `;
 
+ const SpanX = styled.span`
+    margin-left:150px;
+  
+ `;
+
 const url = 'https://us-central1-future4-users.cloudfunctions.net/api'
 const token = 'bat-ravi'
 
@@ -42,13 +47,32 @@ getAllUserslist = () =>{
         console.log(allUsers)
     })
 }
+
+handleOnClickDelete = (taskId) => {
+    console.log(taskId)
+
+    const axiosConfig = {
+        headers: {
+            "api-token": "bat-ravi",
+        }
+    }
+
+    axios.delete(`${url}/users/deleteUser?id=${taskId}`, axiosConfig).then((a) =>{
+        window.alert("Tudo ok! Status: "+a.status)
+        this.getAllUserslist();
+    }).catch((error)=>{
+        window.alert(error)
+    })
+} 
+
+
     render(){
         return(
           <MainContainer>
             <H2Titulo>Lista Cadastrada</H2Titulo>
             <ul>
                 {this.state.allUsersList.map(user =>(
-                    <li>{user.name}</li>
+                    <li>{user.name}<SpanX onClick={() => {this.handleOnClickDelete(user.id)}}>X</SpanX></li>
                 ))}
             </ul>
         </MainContainer>

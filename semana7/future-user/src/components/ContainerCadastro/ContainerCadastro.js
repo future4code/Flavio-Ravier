@@ -31,27 +31,56 @@ const BotaoSalvar = styled.button`
 margin:15px auto;
 `;
 
+const baseURL = 'https://us-central1-future4-users.cloudfunctions.net/api';
 
 class ContainerCadastro extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-           /*  paginaCadastro: true, */
+           name: "",
+           email: "",
         }
     }
   
+handleNameChange = (event) =>{
+  this.setState({ name: event.target.value})
+}
+
+handleEmailChange = (event) =>{
+  this.setState({ email: event.target.value})
+}
+
+handleCreateUser = () =>{
+  const userToBeCreated = {
+    name: this.state.name,
+    email: this.state.email,
+  }
+
+  const axiosConfig = {
+    headers: {
+      "api-token": "bat-ravi",
+    }
+  }
+
+  axios.post(`${baseURL}/users/createUser`, userToBeCreated, axiosConfig).then((a)=>{
+    window.alert("Tudo ok! Status: "+a.status)
+  }).catch((aiai)=>{
+    window.alert(aiai)
+})
+}
+
     render(){
         return(
           <MainContainerCadastro>
             <DivForm>
               <LabelForm>Nome:</LabelForm>
-              <InputForm></InputForm>
+              <InputForm value={this.state.name} onChange={this.handleNameChange}></InputForm>
             </DivForm>
             <DivForm>
               <LabelForm>Email:</LabelForm>
-              <InputForm></InputForm>
+              <InputForm value={this.state.email} onChange={this.handleEmailChange}></InputForm>
             </DivForm>
-            <BotaoSalvar>Salvar</BotaoSalvar>
+            <BotaoSalvar onClick={this.handleCreateUser}>Salvar</BotaoSalvar>
         </MainContainerCadastro>
       ) 
     }
