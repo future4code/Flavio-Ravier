@@ -1,7 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
-import Post from "./../../containers/Post/index"
-import Planner from "./../../containers/Planner"
+import Post from "./../../containers/Post/index";
+import Planner from "./../../containers/Planner";
+import { connect } from "react-redux";
+
 
 const PlannerWrapper = styled.div`
   width: 100%;
@@ -15,16 +17,15 @@ const PlannerWrapper = styled.div`
   margin-top:30px;
 `;
 
-
-function PlannerPage() {
-	
-    	return (
-    		<PlannerWrapper>
-				<Post></Post>
-				<Planner></Planner>
-    		</PlannerWrapper>
-    	)
-  	
+export class PlannerPage extends Component {
+	render(){
+    return (
+      <PlannerWrapper>
+        <Post></Post>
+        <Planner></Planner>
+      </PlannerWrapper>
+    )
+  }
+    	
 }
-
-export default PlannerPage;
+export default connect()(PlannerPage);

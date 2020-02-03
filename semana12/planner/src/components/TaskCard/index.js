@@ -16,7 +16,7 @@ const TaskCardWrapper = styled(Paper)`
   padding:5px;
 `;
 
-class TaskCard extends Component {
+export class TaskCard extends Component {
 
     render() {
         return (

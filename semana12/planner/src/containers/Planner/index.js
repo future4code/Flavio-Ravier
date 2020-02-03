@@ -38,7 +38,7 @@ const DayDiv = styled.div`
 `;
 
 
-class Planner extends Component {
+export class Planner extends Component {
     
 
     componentDidMount() {
@@ -141,8 +141,6 @@ class Planner extends Component {
                 </DayDiv>
             </PlannerWrapper>
         )
-        
-
     }
 }
 
@@ -164,7 +162,6 @@ function mapToDispatch(dispatch) {
     return{
         
         getTaskList: () => dispatch(getAllTasks()),
-    
     }
 }
     

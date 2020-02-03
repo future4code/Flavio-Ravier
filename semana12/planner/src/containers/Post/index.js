@@ -19,7 +19,7 @@ const CreatePostContainer = styled.form`
   justify-content:space-evenly;
 `;
 
-class Post extends Component {
+export class Post extends Component {
     constructor(props) {
         super(props)
         this.state = {
