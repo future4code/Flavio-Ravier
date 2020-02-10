@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testa componente TodoItem Snapshot 1`] = `
+<div
+  className="sc-bdVaJa gLJfMc"
+>
+  <li
+    className="sc-bwzfXH cozqzq"
+    onClick={[Function]}
+  />
+  <span
+    className="sc-htpNat eAAkmT"
+    onClick={[Function]}
+  >
+    X
+  </span>
+</div>
+`;

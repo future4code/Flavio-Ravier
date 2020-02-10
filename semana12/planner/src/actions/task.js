@@ -20,6 +20,7 @@ export const setTasks = (mon,tue,wed,thu,fri,sat,sun) => ({
     }
   })
 
+  
   export const getAllTasks = () => async (dispatch) => {
     
     try {

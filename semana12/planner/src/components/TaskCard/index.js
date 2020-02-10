@@ -16,6 +16,7 @@ const TaskCardWrapper = styled(Paper)`
   padding:5px;
 `;
 
+
 export class TaskCard extends Component {
 
     render() {
@@ -23,7 +24,6 @@ export class TaskCard extends Component {
             <TaskCardWrapper>
                 <Typography variant="overline" color="primary" component="h5">
                     {this.props.taskText}
-                   
                 </Typography>
             </TaskCardWrapper>
         )

@@ -17,6 +17,7 @@ const PlannerWrapper = styled.div`
   margin-top:30px;
 `;
 
+
 export class PlannerPage extends Component {
 	render(){
     return (
