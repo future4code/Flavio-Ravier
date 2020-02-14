@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Planner Snapshot 1`] = `
+<div
+  className="sc-bwzfXH fIVSIO"
+>
+  <div
+    className="sc-bxivhb dzIoij"
+  >
+    <h5
+      className="MuiTypography-root MuiTypography-h5 MuiTypography-colorSecondary"
+      style={
+        Object {
+          "margin": "0 0 15px 0",
+        }
+      }
+    >
+      Segunda
+    </h5>
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-vertical"
+  />
+  <div
+    className="sc-bxivhb dzIoij"
+  >
+    <h5
+      className="MuiTypography-root MuiTypography-h5 MuiTypography-colorSecondary"
+      style={
+        Object {
+          "margin": "0 0 15px 0",
+        }
+      }
+    >
+      Terça
+    </h5>
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-vertical"
+  />
+  <div
+    className="sc-bxivhb dzIoij"
+  >
+    <h5
+      className="MuiTypography-root MuiTypography-h5 MuiTypography-colorSecondary"
+      style={
+        Object {
+          "margin": "0 0 15px 0",
+        }
+      }
+    >
+      Quarta
+    </h5>
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-vertical"
+  />
+  <div
+    className="sc-bxivhb dzIoij"
+  >
+    <h5
+      className="MuiTypography-root MuiTypography-h5 MuiTypography-colorSecondary"
+      style={
+        Object {
+          "margin": "0 0 15px 0",
+        }
+      }
+    >
+      Quinta
+    </h5>
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-vertical"
+  />
+  <div
+    className="sc-bxivhb dzIoij"
+  >
+    <h5
+      className="MuiTypography-root MuiTypography-h5 MuiTypography-colorSecondary"
+      style={
+        Object {
+          "margin": "0 0 15px 0",
+        }
+      }
+    >
+      Sexta
+    </h5>
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-vertical"
+  />
+  <div
+    className="sc-bxivhb dzIoij"
+  >
+    <h5
+      className="MuiTypography-root MuiTypography-h5 MuiTypography-colorSecondary"
+      style={
+        Object {
+          "margin": "0 0 15px 0",
+        }
+      }
+    >
+      Sábado
+    </h5>
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-vertical"
+  />
+  <div
+    className="sc-bxivhb dzIoij"
+  >
+    <h5
+      className="MuiTypography-root MuiTypography-h5 MuiTypography-colorSecondary"
+      style={
+        Object {
+          "margin": "0 0 15px 0",
+        }
+      }
+    >
+      Domingo
+    </h5>
+  </div>
+</div>
+`;

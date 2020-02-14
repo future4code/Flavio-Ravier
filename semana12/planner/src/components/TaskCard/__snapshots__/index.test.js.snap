@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot 1`] = `
+<div
+  className="MuiPaper-root sc-bdVaJa jSmAnv MuiPaper-elevation1 MuiPaper-rounded"
+>
+  <h5
+    className="MuiTypography-root MuiTypography-overline MuiTypography-colorPrimary"
+  />
+</div>
+`;
