@@ -160,7 +160,7 @@ class TripsCreatePage extends Component {
         </TextField>
         
             <div style={{margin:"10px 0"}}></div>
-                <Button type="submit"  onClick={this.props.goToTrips} >Login</Button>
+                <Button type="submit"  onClick={this.props.goToTrips} >Criar</Button>
             
       </form>
       
