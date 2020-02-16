@@ -15,5 +15,5 @@ const pegarJSON : Promise<any> = new Promise((resolve,reject) => {
 
 pegarJSON.then((json:any) =>{
     let obj: any = JSON.parse(json)
-    console.log(obj.bdClient.clients)
+    console.log(obj)
 })

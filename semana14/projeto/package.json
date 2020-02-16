@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "create_account":"tsc && createAccount.js",
+    "create_account":"tsc && node build/createAccount.js",
     "banco":"tsc && node build/banco.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && node build/test.js --target es6"
