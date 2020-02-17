@@ -1,0 +1,40 @@
+{
+    "bdClient": [
+        {
+            "id": "10664816670",
+            "name": "Flavio Ravier",
+            "age": 29,
+            "saldo": 0,
+            "transactions": [
+                {
+                    "date": "13151551321",
+                    "value": -20,
+                    "description": "compra de comida"
+                },
+                {
+                    "date": "13151551321",
+                    "value": 50,
+                    "description": "deposito de 50 reais"
+                }
+            ]
+        },
+        {
+            "id": "10664816670",
+            "name": "Flavio Ravier",
+            "age": 29,
+            "saldo": 0,
+            "transactions": [
+                {
+                    "date": "14/02/2020",
+                    "value": -20,
+                    "description": "compra de comida"
+                },
+                {
+                    "date": "16/02/2020",
+                    "value": 50,
+                    "description": "deposito de 50 reais"
+                }
+            ]
+        }
+    ]
+}
