@@ -1,0 +1,22 @@
+{
+  "name": "oop",
+  "version": "1.0.0",
+  "module": "system",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "transfer": "tsc && node build/transfer.js",
+    "payDebit": "tsc && node build/payDebit.js",
+    "addCredits": "tsc && node build/addCredits.js",
+    "createAccount": "tsc && node build/createAccount.js",
+    "balance": "tsc && node build/balance.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node build/test.js --target es6"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.12.14",
+    "moment": "^2.24.0"
+  }
+}
