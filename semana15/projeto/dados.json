@@ -1,0 +1,80 @@
+{
+    "turmas": [
+        {
+            "inicio": "01/01/2020",
+            "termino": "01/07/2020",
+            "patrono": "Sangan",
+            "listaAluno": [],
+            "listaProf": []
+        },
+        {
+            "inicio": "01/01/2020",
+            "termino": "01/07/2020",
+            "patrono": "Newton",
+            "listaAluno": [
+                {
+                    "nome": "teet",
+                    "email": "teet@teet",
+                    "nascimento": "01/01/1990",
+                    "turma": "Newton"
+                },
+                {
+                    "nome": "lucy",
+                    "email": "teet@teet",
+                    "nascimento": "01/01/1990",
+                    "turma": "Newton"
+                }
+            ],
+            "listaProf": []
+        },
+        {
+            "inicio": "01/01/2020",
+            "termino": "01/07/2020",
+            "patrono": "Bouman",
+            "listaAluno": [
+                {
+                    "nome": "rav",
+                    "email": "rav@ravi",
+                    "nascimento": "01/01/1990",
+                    "turma": "Bouman"
+                }
+            ],
+            "listaProf": []
+        },
+        {
+            "inicio": "01/01/2020",
+            "termino": "01/07/2020",
+            "turma": "Mobile1",
+            "listaAluno": [],
+            "listaProf": []
+        }
+    ],
+    "professores": [
+        {
+            "nome": "darvas",
+            "email": "darvas@darvas",
+            "nascimento": "01/01/1990",
+            "especialidade": "Back"
+        }
+    ],
+    "alunos": [
+        {
+            "nome": "rav",
+            "email": "rav@ravi",
+            "nascimento": "01/01/1990",
+            "turma": "Bouman"
+        },
+        {
+            "nome": "teet",
+            "email": "teet@teet",
+            "nascimento": "01/01/1990",
+            "turma": "Newton"
+        },
+        {
+            "nome": "lucy",
+            "email": "teet@teet",
+            "nascimento": "01/01/1990",
+            "turma": "Newton"
+        }
+    ]
+}
