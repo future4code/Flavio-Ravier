@@ -1,3 +1,7 @@
+
+
+const basePath = "./bd/bdClients.json"
+
 import { readFile, writeFile } from 'fs'
 
 const id: string = process.argv[2]
@@ -59,7 +63,6 @@ getJSON.then((json) => {
 }).catch((e) => {
     console.error(e)
 })
-
 
 
 
