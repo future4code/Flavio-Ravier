@@ -1,0 +1,40 @@
+Responda com a Query SQL correspondente para obter o que é pedido:
+
+a) O nome e sobrenome de todos os atores que Contenham a letra `a` no sobrenome;
+
+SELECT first_name, last_name
+FROM actors
+WHERE last_name LIKE "%a%";
+
+b) Sobrenome de todos os atores chamados DAN ou JULIA
+
+SELECT last_name
+FROM actors
+WHERE first_name LIKE "DAN" OR first_name LIKE "JULIA";
+
+c) O nome e o sobrenome de todos os atores que se chamem ANGELINA OU contenham `b` no nome.
+
+SELECT first_name, last_name
+FROM actors
+WHERE first_name LIKE "ANGELINA" OR first_name LIKE "%b%";
+
+
+Até agora vocês trabalharam com a tabela `actors` dentro do banco de dados chamado `exercicios`. Agora a ideia é que vocês criem uma cópia dessa tabela no seu banco de dados  (cada um de vocês tem um banco de dados já criado cujo nome é o seu primeiro nome)
+
+Agora, analise a estrutura da tabela `actors` e crie uma tabela igual no banco de dados com seu nome.
+
+use `bouman-flavio`;
+
+CREATE TABLE actors (
+	actor_id smallint,
+    first_name varchar(45),
+    last_name varchar(45)
+);
+
+Após criar a tabela, insira pelo menos um item.  🌚
+
+INSERT INTO actors (actor_id, first_name, last_name)
+VALUES (1, "brad", "pitt");
+
+
+	
