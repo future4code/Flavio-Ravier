@@ -1,0 +1,103 @@
+## 1. Cidades
+
+Acesse a tabela `city` e responda qual Query SQL retornará:
+
+1. As 5 cidades com maior população.
+
+select Name, population 
+from city
+group by Name, population
+order by population desc
+limit 5;
+
+2. A média populacional em cada distrito.
+
+select avg(population), district
+from city
+group by district
+order by district;
+
+3. A quantidade de cidades por distrito.
+
+select count(district), district
+from city
+group by district
+order by district;
+
+4. Os 10 países (countryCode) com mais cidades, em ordem decrescente;  
+
+select count(CountryCode), countrycode
+from city
+group by countrycode
+order by count(countrycode) desc
+limit 10;
+
+---
+
+## 2. Países
+
+Acesse a tabela `country` e responda qual Query SQL retornará:
+
+1. Os 100 primeiros países com mais de 100 mil habitantes.
+
+select count(name), name, population
+from city
+where population > 100000
+group by name, population
+order by population desc
+limit 5;
+
+2. A quantidade de países com mais de 5 milhões de habitantes.
+
+select count(name) as 'numero de paises com mais de 5kk'
+from country
+where population > 5000000;
+
+3. A soma do valor de todas as populações da Asia, com o Alias "Soma de população".
+
+select sum(population) as 'Soma de população'
+from country
+where Continent = 'Asia';
+
+4. A quantidade de Repúblicas e Monarquias no mundo.
+
+select count(name) as 'Nº de republicas e monarquias'
+from country
+where GovernmentForm = 'Republic' or GovernmentForm = 'Monarchy';
+
+5. A forma de governo que mais se repete e a quantidade de vezes que aparece.
+
+select count(governmentform) as 'n forma de governo', governmentform
+from country
+group by governmentform
+order by count(governmentform) desc
+limit 1;
+
+6. A média de população de cada continente.
+
+select avg(population), continent
+from country
+group by continent
+order by continent;
+
+7. Os dez últimos países a conquistar independência.
+
+select name, indepyear
+from country
+order by indepyear desc
+limit 10;
+
+8. A média de expectativa de vida de cada continente. Importante: o nome dos continentes deve ser exibido em caixa baixa (letras minúsculas).
+
+select lower(continent), avg(lifeexpectancy)
+from country
+group by lower(continent)
+order by avg(lifeexpectancy) desc;
+
+9. Os 3 continentes mais extensos em território. 🌚
+
+select sum(surfacearea), continent
+from country
+group by continent
+order by sum(surfacearea) desc
+limit 3;
